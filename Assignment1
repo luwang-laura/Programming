@@ -1,0 +1,37 @@
+//Task1: Sales of Concert:
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Concert {
+	public static void main(String[] args) {
+		// Screen input definition
+		Scanner input;
+		input = new Scanner(System.in);
+		// Decimal Definition
+		DecimalFormat df;
+		df = new DecimalFormat("0.00");
+
+		// Screen input
+		System.out.print("Enter number of A seats sold: ");
+		int numA = input.nextInt();
+		System.out.print("Enter price of A tickets: ");
+		float priceA = input.nextFloat();
+		System.out.print("Enter number of B seats sold: ");
+		int numB = input.nextInt();
+		System.out.print("Enter price of B tickets: ");
+		float priceB = input.nextFloat();
+		System.out.print("Enter number of C seats sold: ");
+		int numC = input.nextInt();
+		System.out.print("Enter price of C tickets: ");
+		float priceC = input.nextFloat();
+		// Make Sum
+		float totalSales = (numA * priceA + numB * priceB + numC * priceC);
+		// Printout
+		System.out.println("\n \t \t Tickets Sold \t Price per Ticket");
+		System.out.println("      \t \t ..................\t ..................");
+		System.out.println("A Tickets: " + "\t" + numA + "\t \t \t" + df.format(priceA));
+		System.out.println("B Tickets: " + "\t" + numB  + "\t \t \t" + df.format(priceB));
+		System.out.println("C Tickets: " + "\t" + numC  + "\t \t \t" + df.format(priceC));
+		System.out.println("\n \t \t" + "Total Sales € " + "\t" + df.format(totalSales));
+  }//End Method
+}//End Class
